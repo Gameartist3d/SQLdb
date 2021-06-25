@@ -1,0 +1,11 @@
+//creates a basic table for user data
+CREATE TABLE `users` (
+  `user_ID` int unsigned NOT NULL,
+  `joinDate` datetime NOT NULL,
+  `username` varchar(50) DEFAULT 'change name',
+  `userPass` varchar(50) DEFAULT NULL,
+  `dragonCount` int unsigned DEFAULT '0',
+  `email_address` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`user_ID`),
+  UNIQUE KEY `email_address` (`email_address`)
+)
