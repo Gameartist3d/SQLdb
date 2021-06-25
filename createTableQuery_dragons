@@ -1,0 +1,19 @@
+//create table query for dragons
+CREATE TABLE `dragons` (
+  `user_ID` int unsigned NOT NULL,
+  `dragonID` int unsigned NOT NULL AUTO_INCREMENT,
+  `dragonName` varchar(50) DEFAULT NULL,
+  `age` int unsigned DEFAULT NULL,
+  `location` varchar(60) DEFAULT NULL,
+  `dragonType` varchar(40) DEFAULT NULL,
+  `dragonSex` enum('M','F') DEFAULT NULL,
+  `dragonWins` int unsigned DEFAULT NULL,
+  `strength` int unsigned DEFAULT NULL,
+  `endurance` int unsigned DEFAULT NULL,
+  `speed` int unsigned DEFAULT NULL,
+  `intelligence` int unsigned DEFAULT NULL,
+  `infamy` int DEFAULT NULL,
+  PRIMARY KEY (`dragonID`),
+  KEY `user_ID` (`user_ID`),
+  CONSTRAINT `dragons_ibfk_1` FOREIGN KEY (`user_ID`) REFERENCES `users` (`user_ID`) ON DELETE CASCADE
+) 
